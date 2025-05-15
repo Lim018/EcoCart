@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import LandingPage from "./pages/LandingPage"
+import AboutUs from "./pages/AboutUs"
 import ArticleArchive from "./pages/ArticleArchive"
 import ArticleDetail from "./pages/ArticleDetail"
 import ProductCatalog from "./pages/ProductCatalog"
@@ -14,6 +15,11 @@ import ManageProducts from "./pages/ManageProducts"
 import ManageUsers from "./pages/ManageUsers"
 import ManageTransactions from "./pages/ManageTransactions"
 import Dashboard from "./pages/Dashboard"
+import Authentication from "./pages/Authentication"
+import ContactPage from "./pages/ContactPage"
+import SearchPage from "./pages/SearchPage"
+import AccountPage from "./pages/AccountPage"
+import "./styles/main.css"
 
 function App() {
   return (
@@ -22,6 +28,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/articles" element={<ArticleArchive />} />
           <Route path="/articles/:id" element={<ArticleDetail />} />
           <Route path="/products" element={<ProductCatalog />} />
@@ -34,6 +41,10 @@ function App() {
           <Route path="/admin/users" element={<ManageUsers />} />
           <Route path="/admin/transactions" element={<ManageTransactions />} />
           <Route path="/admin/dashboard" element={<Dashboard />} />
+          <Route path="/auth" element={<Authentication />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/account" element={<AccountPage />} />
         </Routes>
       </main>
       <Footer />
